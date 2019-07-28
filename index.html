@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <title>ЕГЭ и ОГЭ по английскому</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <nav class="navbar bg-light navbar-expand-md navbar-light">
+                <a href="" class="navbar-brand"><span class="ege">E</span>xams<span class="ege">G</span>et<span class="ege">E</span class="ege">asy</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <!-- сделать пункты справа -->
+                <div class="collapse navbar-collapse" id="navBar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+                        <li class="nav-item"><a href="#reviews--carousel" class="nav-link">Отзывы</a></li>
+                        <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="header__text-box">
+                <a href="#" class="btn btn--white btn--animated">Бесплатное пробное занятие</a>
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Подготовка к </br>ЕГЭ и ОГЭ </br>по английскому</span>
+                </h1>
+            </div>
+
+        </header>
+        <h2 id='about' class="display-5 ege mt-5">Обо мне</h2>
+
+
+        <div class="mb-5 p-3 shadow">
+            <h5><img class="about--photo m-3" src="/img/teacher.jpg" alt="Here should be a photo">Здравствуйте! Давайте знакомиться.</h5>
+            <p class="lead mr-4">
+                Меня зовут Мария Найдович, я преподаватель английского языка. Мой первый учительский опыт состоялся в 2006 году на втором курсе ИнЯза. Затем был перерыв, и всерьез к преподаванию я вернулась в 2011 году. С тех пор, это моя основная деятельность, мой источник
+                вдохновения и мотиватор для постоянного профессиональной развития. </br>
+                </br>
+                <span class="ege">Вот несколько фактов обо мне:</span></br>
+                </br>5 лет работы в ведущем лингвистическом центре Екатеринбурга и 2 года официального трудоустройства за границей (Китай), в том числе в международной языковой школе;</br>
+                </br>Обучение английскому детской и взрослой аудитории по разным направлениям, включая подготовку к ЕГЭ/ОГЭ и международным экзаменам;</br>
+                </br>Участие в тренингах по профессиональному развитию; </br>
+                </br>Разработка и проведение тренинга по английскому произношению;</br>
+                </br>Разработка методических материалов для обучения начинающих преподавателей.
+
+            </p>
+
+        </div>
+
+        <h2 class="display-5 ege">Отзывы</h2>
+
+        <!-- TODO: Уменьшить высоту блока отзывов для больших экранов -->
+
+
+        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+
+            <ol id="reviews--carousel" class="carousel-indicators">
+                <!-- only one element is active -->
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <!-- задать высоту -->
+            <div class="carousel-inner mb-5" role="listbox">
+                <div class="carousel-item active">
+                    <div class="card">
+                        <!--  <img class="card-img-top" src="https://source.unsplash.com/400/250" alt=""> -->
+                        <div class="card-body shadow">
+                            <h5 class="card-title">Наталья</h5>
+                            <div class="d-flex flex-row">
+                                <div class="mr-3">
+                                </div>
+
+                                <p class="card-text">
+                                    <img class="reviews--photos mb-1" src="/img/Natalia.jpg" alt="Here should be a photo">Хочу выразить огромную благодарность Марии. Моё знакомство с английским языком началось с её занятий. Каждое занятие было построено
+                                    методично и грамотно и 90 минут пролетали на одном дыхании. Я очень рада своему прогрессу в изучении английского языка и с полной уверенностью могу порекомендовать Марию как прекрасного специалиста. Сейчас уверенно
+                                    использую язык во время путешествий.</br>
+                                    </br>
+                                    </br>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <!-- <img class="card-img-top" src="https://source.unsplash.com/400/250" alt=""> -->
+                        <div class="card-body shadow">
+                            <h5 class="card-title ml-2">Егор</h5>
+                            <div class="d-flex flex-row">
+
+                                <p class="card-text ml-2">
+                                    <img class="reviews--photos mb-1" src="/img/egor.jpg" alt="Here should be a photo"> Здравствуйте! Занимался у Марии Юрьевны в течении 3 лет, за это время смог получить уровень английского В1, занятия проходили очень
+                                    интересно и занимательно, читали книги на английском, слушали аудио материалы, после уроков вопросов по теме не оставалась, вся суть темы становилась понятной в первой половине урока! На многих занятиях мы разговаривали
+                                    только на английском языке, что бы научиться лучше говорить и понимать иностранную речь. Благодаря Марии Юрьевне теперь я могу спокойно общаться за рубежом, и за это я хочу сказать огромное спасибо!!!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <!--  <img class="card-img-top" src="https://source.unsplash.com/400/250" alt=""> -->
+                        <div class="card-body shadow">
+                            <h5 class="card-title">Елена</h5>
+                            <p class="card-text">
+                                <img class="reviews--photos mb-1" src="/img/Elena.png" alt="Here should be a photo">Моя дочка занималась английским языком у Марии Юрьевны с 6 лет. Это были и занятия в группе, и индивидуально. Очень грамотный и самый добрый
+                                преподаватель английского языка. Дочка ходила с удовольствием. Сейчас моя дочь учится за границей в частной международной английской школе и английский язык остаётся также любимым предметом с высокой оценкой. А все благодаря
+                                первому преподавателю, который правильно заложил знания и любовь к языку. Очень и очень рекомендую! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <!--  <img class="card-img-top" src="https://source.unsplash.com/400/250" alt=""> -->
+                        <div class="card-body shadow">
+                            <h5 class="card-title">Нелли</h5>
+                            <p class="card-text">
+                                <img class="reviews--photos mb-1" src="/img/nelli.jpg" alt="Here should be a photo">Мария занималась с моей дочерью подготовкой к ОГЭ по английскому (в то время он назывался ГИА). Затем, когда Мария уехала работать за границу,
+                                мы продолжили занятия удаленно, чтобы подготовиться к ЕГЭ. Уроки по скайпу оказались не менее эффективными и экономили много времени. В итоге, моя дочь успешно сдала экзамен по английскому и смогла поступить на бюджет на
+                                языковой факультет. Огромное спасибо за это нашему преподавателю Марии!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Shevrons -->
+            <a class="carousel-control-prev " href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <!-- <span class="carousel-control-prev-icon "></span> -->
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <!-- <span class="carousel-control-next-icon"></span> -->
+            </a>
+
+        </div>
+
+        <h2 id="contacts" class="display-5 ege">Контакты</h2>
+
+        <dl>
+            <dt>Телефон</dt>
+            <dd>+7-992-330-87-13</dd>
+            <dt>Почта</dt>
+            <dd>maria_naidovich@mail.ru</dd>
+        </dl>
+
+        <footer class="row mt-5 mb-2 bg-muted">
+            <div class="col-6">ExamsGetEasy &nbsp &copy</div>
+            <div class="col-6 text-right">
+                ссылки на vk, instagram, mail
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

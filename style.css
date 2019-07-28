@@ -1,0 +1,146 @@
+/* @font-face {
+    font-family: "sourcesanspro";
+    src: url(sourcesanspro/sourcesanspro.woff) format('woff');
+} */
+
+body {
+    font-family: "Helvetica Neue";
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(5, 210, 242, 0.329), rgba(5, 37, 242, 0.39)), url(img/bg_teacher.jpg);
+    background-size: cover;
+    background-position: top;
+    /*we can see always the bottom side of the picture when we change the brouser size*/
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.navbar {
+    background-color: #E9EFF2 !important;
+    direction: ltr !important;
+}
+
+
+/* @media only screen and(max-width: 400px) {
+    .carousel-inner {
+        width: 100%;
+        height: 18rem !important;
+    }
+} */
+
+.carousel-inner {
+    width: 100%;
+    /* height: 33rem !important; */
+}
+
+.reviews--photos {
+    margin-right: 30px;
+    height: 12rem;
+    border-radius: 5px;
+    float: left;
+}
+
+.about--photo {
+    /* margin: 30px; */
+    height: 25rem;
+    border-radius: 5px;
+    float: right;
+}
+
+.ege {
+    color: #F2507B;
+}
+
+.navbar-light {
+    font-weight: 700;
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+}
+
+.header__logo {
+    height: 2.5rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    backface-visibility: hidden;
+    margin-top: 3rem;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    /*применяется в анимации h1*/
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem)
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.contacts-mail,
+.contacts-phone {
+    width: max-content !important;
+}
+
+.btn:link,
+.btn:visited {
+    /* чтобы текст в кнопке не переносился на новую линию */
+    width: max-content;
+    text-transform: uppercase;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.2rem;
+    /* background-color: #F2507B; */
+    background-image: linear-gradient(#F2507B, #d1355f);
+    color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1) !important;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1) !important;
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
