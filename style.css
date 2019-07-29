@@ -1,10 +1,12 @@
 /* @font-face {
-    font-family: "sourcesanspro";
-    src: url(sourcesanspro/sourcesanspro.woff) format('woff');
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Black.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 } */
 
 body {
-    font-family: "Helvetica Neue";
+    font-family: sans-serif;
 }
 
 .header {
@@ -22,13 +24,17 @@ body {
     direction: ltr !important;
 }
 
+.modal--img {
+    max-width: 760px;
+    align-self: center;
+}
 
-/* @media only screen and(max-width: 400px) {
-    .carousel-inner {
-        width: 100%;
-        height: 18rem !important;
+@media screen and (max-width: 991px) {
+    .modal--img {
+        width: 28rem;
+        align-self: center;
     }
-} */
+}
 
 .carousel-inner {
     width: 100%;
@@ -43,10 +49,8 @@ body {
 }
 
 .about--photo {
-    /* margin: 30px; */
-    height: 25rem;
+    width: 100%;
     border-radius: 5px;
-    float: right;
 }
 
 .ege {
@@ -84,7 +88,7 @@ body {
 .heading-primary--main {
     display: block;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: .5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -109,6 +113,10 @@ body {
 .contacts-mail,
 .contacts-phone {
     width: max-content !important;
+}
+
+.btn--submit {
+    align-self: center !important;
 }
 
 .btn:link,
