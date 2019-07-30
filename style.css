@@ -8,21 +8,29 @@
 body {
     font-family: sans-serif;
 }
-
+/*  background-image: linear-gradient(to right bottom, rgba(5, 210, 242, 0.329), rgba(5, 37, 242, 0.39)), url(img/bg_teacher.jpg);*/
+/* background-image: linear-gradient(to right bottom, rgba(94, 44, 211, 0.9), rgba(197, 174, 246, 0.9)), url(img/bg_teacher.jpg); годно*/
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(5, 210, 242, 0.329), rgba(5, 37, 242, 0.39)), url(img/bg_teacher.jpg);
+    height: 85vh;
+    background-image: linear-gradient(to right bottom, rgba(94, 44, 211, 0.9), rgba(244, 184, 194, 0.9)), url(img/bg_teacher.jpg);
     background-size: cover;
     background-position: top;
     /*we can see always the bottom side of the picture when we change the brouser size*/
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .navbar {
-    background-color: #E9EFF2 !important;
-    direction: ltr !important;
+    background-color: rgb(243, 222, 225) !important;
+     direction: ltr !important;
+     width: inherit !important; 
 }
+
+/* @media (max-width: 767px) {
+    .navbar .container {
+      width: 100%;
+    }
+} */
 
 .modal--img {
     max-width: 760px;
@@ -73,7 +81,7 @@ body {
 
 .header__text-box {
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -85,14 +93,56 @@ body {
     margin-top: 3rem;
 }
 
-.heading-primary--main {
+.heading-primary-main {
+    
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: .5rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+}
+
+#about--list {
+    list-style: none;
+}
+
+#about--list li {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left: -2em;
+}
+
+#about--list li::before {
+    content: "\2689";
+    color: #F2507B;
+    display: inline-block;
+    width: 2em;
+}
+
+#try__lesson--list li {
+    list-style: none;
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+#try__lesson--list li::before {
+    content: "\2689";
+    color: #F2507B;
+    display: inline-block;
+    width: 2rem;
 }
 
 @keyframes moveInLeft {
@@ -105,6 +155,21 @@ body {
         transform: translateX(1rem);
     }
     100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight { /*применяется в анимации h1*/
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
         opacity: 1;
         transform: translate(0);
     }
