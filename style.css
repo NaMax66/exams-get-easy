@@ -5,8 +5,21 @@
     font-style: normal;
 } */
 
+
+/* https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/ - чтобы меню не дергалось */
+
+html {
+    scroll-behavior: smooth;
+    /* overflow-y: scroll;
+    margin-left: calc(100vw - 100%); */
+}
+
 body {
     font-family: sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 
@@ -147,13 +160,13 @@ body {
     width: 2rem;
 }
 
-#about__service--list li {
+.red__dot__list li {
     list-style: none;
     font-size: 1.2rem;
     margin-bottom: 1em;
 }
 
-#about__service--list li::before {
+.red__dot__list li::before {
     content: "\2689";
     color: #F2507B;
     display: inline-block;

@@ -16,6 +16,4 @@
 
     document.getElementById('header--btn').addEventListener('click', submitFormScript);
 
-
-
 }())
