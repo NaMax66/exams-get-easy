@@ -1,0 +1,29 @@
+{
+  "name": "english-exams-tutor-local",
+  "version": "1.0.0",
+  "description": "EGE project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start",
+    "dev": "nodemon hello"
+  },
+  "author": "Max",
+  "license": "ISC",
+  "dependencies": {
+    "binary": "^0.3.0",
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "log4js": "^4.5.1",
+    "nodemailer": "^6.3.0",
+    "pub": "^0.2.0",
+    "pug": "^2.0.4",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "uuid": "^3.3.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
