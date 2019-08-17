@@ -1,24 +1,17 @@
-/* @font-face {
-    font-family: 'Source Sans Pro';
-    src: url('SourceSansPro-Black.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-} */
-
-
-/* https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/ - чтобы меню не дергалось */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* display: flex; */
 }
 
 html {
     scroll-behavior: smooth;
-    /* overflow-y: scroll;
-    margin-left: calc(100vw - 100%); */
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -29,18 +22,11 @@ a:hover {
     text-decoration: none;
 }
 
-
-/*  background-image: linear-gradient(to right bottom, rgba(5, 210, 242, 0.329), rgba(5, 37, 242, 0.39)), url(img/bg_teacher.jpg);*/
-
-
-/* background-image: linear-gradient(to right bottom, rgba(94, 44, 211, 0.9), rgba(197, 174, 246, 0.9)), url(img/bg_teacher.jpg); годно*/
-
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom, rgba(94, 44, 211, 0.9), rgba(244, 184, 194, 0.9)), url(img/bg_teacher.jpg);
     background-size: cover;
     background-position: top;
-    /*we can see always the bottom side of the picture when we change the brouser size*/
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 }
@@ -71,7 +57,6 @@ a:hover {
 
 .carousel-inner {
     width: 100%;
-    /* height: 33rem !important; */
 }
 
 .reviews--photos {
@@ -92,12 +77,6 @@ a:hover {
 
 .navbar-light {
     font-weight: 700;
-}
-
-@media (max-width: 640px) {
-    html {
-        font-size: 62.5%;
-    }
 }
 
 .vscrolling_container {
@@ -163,7 +142,6 @@ a:hover {
 }
 
 @keyframes moveInLeft {
-    /*применяется в анимации h1*/
     0% {
         opacity: 0;
         transform: translateX(-10rem)
@@ -178,7 +156,6 @@ a:hover {
 }
 
 @keyframes moveInRight {
-    /*применяется в анимации h1*/
     0% {
         opacity: 0;
         transform: translateX(10rem);
@@ -203,7 +180,6 @@ a:hover {
 
 .btn--rounded:link,
 .btn--rounded:visited {
-    /* чтобы текст в кнопке не переносился на новую линию */
     width: max-content;
     text-transform: uppercase;
     outline: none !important;
@@ -215,7 +191,6 @@ a:hover {
     transition: all .2s;
     position: relative;
     font-size: 1.2rem;
-    /* background-color: #F2507B; */
     background-image: linear-gradient(#F2507B, #d1355f);
     color: rgb(255, 255, 255);
 }
@@ -244,7 +219,7 @@ a:hover {
     border-radius: .5rem;
 }
 
-#error__msg{
+#error__msg {
     background-color: rgba(255, 159, 170, 0.25);
     color: #333;
     font-weight: bold;
@@ -253,9 +228,10 @@ a:hover {
     border-radius: .5rem;
 }
 
-.hidden__element{
+.hidden__element {
     display: none;
 }
+
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23BDBDBD' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }

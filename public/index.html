@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="description"
+          content="Подготовка к ЕГЭ и ОГЭ по английскому онлайн с сертифицированным репетитором, бесплатное пробное занятие для определения уровня ученика и разработки стратегии подготовки к экзамену">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <title>Репетитор ЕГЭ и ОГЭ по английскому</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
     <script src="https://www.google.com/recaptcha/api.js?render=6Le6jbEUAAAAAL2bF7PLZ4BmkBhLkClSYnu_pEqM"></script>
 
 </head>
-
-<!-- TODO: пересесть на web storm  -->
 
 <body>
 <div class="container">
@@ -36,7 +37,8 @@
                     <li class="nav-item"><a href="#reviews" class="nav-link">Отзывы</a></li>
 
                 </ul>
-                <a data-toggle="modal" data-target="#exampleModal" href="#" id="nav--btn" class="btn--rounded btn--rounded--white">Записаться</a>
+                <a data-toggle="modal" data-target="#exampleModal" href="#" id="nav--btn"
+                   class="btn--rounded btn--rounded--white">Записаться</a>
             </div>
         </nav>
     </div>
@@ -50,12 +52,14 @@
                 <span class="heading-primary-main mb-1">Репетитор<br>по ЕГЭ и ОГЭ</span>
                 <span class="heading-primary-sub">Английский язык Онлайн</span>
             </h1>
-            <a data-toggle="modal" data-target="#exampleModal" href="#" id="header--btn" class="btn--rounded btn--rounded--white">Бесплатное пробное занятие</a>
+            <a data-toggle="modal" data-target="#exampleModal" href="#" id="header--btn"
+               class="btn--rounded btn--rounded--white">Бесплатное пробное занятие</a>
         </div>
     </header>
 
     <!-- Всплывающее окно -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -69,8 +73,12 @@
 
 
                     <form action="/index.html" id="form" method="post">
-                        <div id="success__msg" class="hidden__element">Спасибо за отклик, я свяжусь с вами в ближайшее время</div>
-                        <div id="error__msg" class="hidden__element">Что-то пошло не так. Пожалуйста, свяжитесь со мной по почте <a title="Отправить письмо" href="mailto:maria_naidovich@mail.ru" target="_blank">maria_naidovich@mail.ru</a></div>
+                        <div id="success__msg" class="hidden__element">Спасибо за отклик, я свяжусь с вами в ближайшее
+                            время
+                        </div>
+                        <div id="error__msg" class="hidden__element">Что-то пошло не так. Пожалуйста, свяжитесь со мной
+                            по почте <a title="Отправить письмо" href="mailto:maria_naidovich@mail.ru" target="_blank">maria_naidovich@mail.ru</a>
+                        </div>
                         <div id="input__fields">
                             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" class="w-100">
                             <label for="name">Ваше имя:</label>
@@ -88,8 +96,8 @@
 
                     </form>
                     <script>
-                        grecaptcha.ready(function() {
-                            grecaptcha.execute('6Le6jbEUAAAAAL2bF7PLZ4BmkBhLkClSYnu_pEqM', {action: 'homepage'}).then(function(token) {
+                        grecaptcha.ready(function () {
+                            grecaptcha.execute('6Le6jbEUAAAAAL2bF7PLZ4BmkBhLkClSYnu_pEqM', {action: 'homepage'}).then(function (token) {
                                 //console.log(token);
                                 document.getElementById('g-recaptcha-response').value = token;
                                 document.querySelector('.grecaptcha-badge').style.display = 'none';
@@ -102,102 +110,6 @@
         </div>
     </div>
 
-    <!-- Modal сертификаты -->
-    <div class="modal fade bd-1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/IELTS_teacher_training.jpg" alt="IELTS сертификат">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TEFL_Maria.jpg" alt="TEFL сертификат">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-3-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TKT.jpg" alt="TKT сертификат">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-4-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TKT_1.jpg" alt="TKT-1 сертификат">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-5-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TKT_2.jpg">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-6-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TKT_3.jpg" alt="TKT-3 сертификат">
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-7-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/TOEIC.jpg" alt="TOEC сертификат">
-            </div>
-        </div>
-    </div>
-    <div class="modal fade bd-8-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <img class="modal--img" src="sert/Online.jpg" alt="Cертификат онлайн обучение">
-            </div>
-        </div>
-    </div>
-    <!-- Modal сертификаты конец-->
 
     <!-- Обо мне -->
     <div id='about' class="text-white">_</div>
@@ -209,14 +121,20 @@
             <div class="col-md-6">
                 <h5>Здравствуйте! Давайте знакомиться.</h5>
                 <p class="lead mr-4">
-                    Меня зовут Мария Найдович, я преподаватель английского языка. Мой первый учительский опыт состоялся в 2006 году на втором курсе ИнЯза. Затем был перерыв, и всерьез к преподаванию я вернулась в 2011 году. С тех пор это моя основная деятельность, мой источник
+                    Меня зовут Мария Найдович, я преподаватель английского языка. Мой первый учительский опыт состоялся
+                    в 2006 году на втором курсе ИнЯза. Затем был перерыв, и всерьез к преподаванию я вернулась в 2011
+                    году. С тех пор это моя основная деятельность, мой источник
                     вдохновения и мотиватор для постоянного профессионального развития. <br>
                     <br>
                 </p>
-                <span class="ege">Вот несколько фактов обо мне:</span>
+                <span class="lead ege">Вот несколько фактов обо мне:</span>
                 <ul class="red__dot__list" id="about--list">
-                    <li>5 лет работы в ведущем лингвистическом центре Екатеринбурга и 2 года официального трудоустройства за границей (Китай), в том числе в международной языковой школе;</li>
-                    <li>Обучение английскому языку детской и взрослой аудитории по разным направлениям, включая подготовку к ЕГЭ/ОГЭ и международным экзаменам;</li>
+                    <li>5 лет работы в ведущем лингвистическом центре Екатеринбурга и 2 года официального
+                        трудоустройства за границей (Китай), в том числе в международной языковой школе;
+                    </li>
+                    <li>Обучение английскому языку детской и взрослой аудитории по разным направлениям, включая
+                        подготовку к ЕГЭ/ОГЭ и международным экзаменам;
+                    </li>
                     <li>Участие в тренингах по профессиональному развитию;</li>
                     <li>Разработка и проведение тренинга по английскому произношению;</li>
                     <li>Разработка методических материалов для обучения начинающих преподавателей.</li>
@@ -227,17 +145,18 @@
                 <img class="about--photo" src="img/teacher2.jpg" alt="Моё фото">
                 <!-- сертификаты -->
                 <div id="carouselSert" class="carousel slide mt-2" data-ride="carousel">
-                    <div class="carousel-inner mb-5 " role="listbox">
+                    <div class="carousel-inner mb-5" role="listbox">
                         <div class="carousel-item active">
-                            <div class="card ">
-                                <div class="card-body ">
+                            <div class="card">
+                                <div class="card-body">
                                     <h5 class="card-title">IELTS teacher training program</h5>
-                                    <div class="d-flex flex-row ">
+                                    <div class="d-flex flex-row">
                                         <p class="card-text font-italic">
-                                            <img data-toggle="modal" data-target=".bd-1-modal-lg" class="reviews--photos btn mb-1 " src="/sert/IELTS_teacher_training.jpg " alt="IELTS teacher training program">Сертификат о прохождении
-                                            обучения по критериям оценивания устной и письменной частей международного экзамена IELTS (2019 г.)<br>
-                                            <br>
-                                            <br>
+                                            <img data-toggle="modal" data-target=".bd-1-modal-lg"
+                                                 class="reviews--photos btn mb-1" src="sert/IELTS_teacher_training.jpg"
+                                                 alt="IELTS teacher training program">Сертификат о прохождении
+                                            обучения по критериям оценивания устной и письменной частей международного
+                                            экзамена IELTS (2019 г.)
                                         </p>
                                     </div>
                                 </div>
@@ -248,7 +167,10 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TEFL certificate</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-2-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TEFL_Maria.jpg " alt="TEFL certificate"> Сертификат о прохождении обучения по преподаванию английского
+                                        <img data-toggle="modal" data-target=".bd-2-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TEFL_Maria.jpg "
+                                             alt="TEFL certificate"> Сертификат о прохождении обучения по преподаванию
+                                        английского
                                         как иностранного (2016 г.)</p>
                                 </div>
                             </div>
@@ -258,7 +180,9 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TKT: Young Learners</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-3-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TKT.jpg" alt="TKT: Young Learners">Сертификат по методике преподавания (2017 г.)</p>
+                                        <img data-toggle="modal" data-target=".bd-3-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TKT.jpg"
+                                             alt="TKT: Young Learners">Сертификат по методике преподавания (2017 г.)</p>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +191,9 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TKT Module 1</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-4-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TKT_1.jpg" alt="TKT Module 1">Сертификат по методике преподавания (2012 г.)</p>
+                                        <img data-toggle="modal" data-target=".bd-4-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TKT_1.jpg" alt="TKT Module 1">Сертификат
+                                        по методике преподавания (2012 г.)</p>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +202,9 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TKT Module 2</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-5-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TKT_2.jpg" alt="TKT Module 1">Сертификат по методике преподавания (2012 г.)</p>
+                                        <img data-toggle="modal" data-target=".bd-5-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TKT_2.jpg" alt="TKT Module 1">Сертификат
+                                        по методике преподавания (2012 г.)</p>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +213,9 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TKT Module 3</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-6-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TKT_3.jpg" alt="TKT Module 2">Сертификат по методике преподавания (2012 г.)</p>
+                                        <img data-toggle="modal" data-target=".bd-6-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TKT_3.jpg" alt="TKT Module 2">Сертификат
+                                        по методике преподавания (2012 г.)</p>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +224,9 @@
                                 <div class="card-body ">
                                     <h5 class="card-title ">TOEIC Listening and Reading</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-7-modal-lg" class="reviews--photos btn mb-1 " src="/sert/TOEIC.jpg" alt="TOEIC Listening and Reading">Языковой сертификат (2011 г.)</p>
+                                        <img data-toggle="modal" data-target=".bd-7-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/TOEIC.jpg"
+                                             alt="TOEIC Listening and Reading">Языковой сертификат (2011 г.)</p>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +235,10 @@
                                 <div class="card-body ">
                                     <h5 class="card-title">Teaching English Online course</h5>
                                     <p class="card-text font-italic ">
-                                        <img data-toggle="modal" data-target=".bd-8-modal-lg" class="reviews--photos btn mb-1 " src="/sert/Online.jpg" alt="Teaching English Online">Прохождение курса по методике преподавания английского
+                                        <img data-toggle="modal" data-target=".bd-8-modal-lg"
+                                             class="reviews--photos btn mb-1 " src="sert/Online.jpg"
+                                             alt="Teaching English Online">Прохождение курса по методике преподавания
+                                        английского
                                         языка онлайн от Cambridge Assessment English (2019 г.)</p>
                                 </div>
                             </div>
@@ -325,46 +260,66 @@
 
     <div class="try__lesson shadow p-3  text-left text-justify">
 
-        <p class="lead text-justify">Как будет осуществляться подготовка к экзамену? Структура ОГЭ и ЕГЭ состоит из пяти разделов: аудирование, чтение, лексика и грамматика, письмо, говорение. Соответственно, подготовка также будет включать все пять аспектов.</p>
+        <p class="lead text-justify">Как будет осуществляться подготовка к экзамену? Структура ОГЭ и ЕГЭ состоит из пяти
+            разделов: аудирование, чтение, лексика и грамматика, письмо, говорение. Соответственно, подготовка также
+            будет включать все пять аспектов.</p>
         <a href="#collapse__about__list" class="my_btn btn btn-info ml-5 mb-3" data-toggle="collapse">Подробнее</a>
         <div class="collapse" id="collapse__about__list">
             <div class="card card-body mt-1">
                 <ul class="red__dot__list lead text-left mb-2">
-                    <li>Аудирование: разбор форматов заданий и стратегии их выполнения </li>
-                    <li>Чтение: знакомство с видами заданий и их отработка </li>
-                    <li>Лексика и грамматика: изучение необходимых слов и структур, а также их употребление в устной речи</li>
-                    <li>Письмо: разбор принципов написания письменных работ с последующей практикой </li>
-                    <li>Говорение: ознакомление с требованиями устной части и последующая тренировка, предполагающая использование изученной лексики и грамматики </li>
+                    <li>Аудирование: разбор форматов заданий и стратегии их выполнения</li>
+                    <li>Чтение: знакомство с видами заданий и их отработка</li>
+                    <li>Лексика и грамматика: изучение необходимых слов и структур, а также их употребление в устной
+                        речи
+                    </li>
+                    <li>Письмо: разбор принципов написания письменных работ с последующей практикой</li>
+                    <li>Говорение: ознакомление с требованиями устной части и последующая тренировка, предполагающая
+                        использование изученной лексики и грамматики
+                    </li>
                 </ul>
             </div>
         </div>
-        <p class="lead text-justify ">На занятиях мы будем работать по проверенным и рекомендованным пособиям издательств Macmillan, Cambridge и т.д. Вся подготовка будет проходить с учетом информации, указанной в официальном источнике (сайт ФИПИ).</p>
+        <p class="lead text-justify ">На занятиях мы будем работать по проверенным и рекомендованным пособиям
+            издательств Macmillan, Cambridge и т.д. Вся подготовка будет проходить с учетом информации, указанной в
+            официальном источнике (сайт ФИПИ).</p>
 
         <h2 class="display-5 ege mt-3 text-left">Бесплатное пробное занятие. Что это такое?</h2>
 
-        <p class="lead text-justify ">Цель пробного занятия — определить уровень ученика и дать рекомендации по подготовке к экзамену. Как проходит пробное занятие: </p>
+        <p class="lead text-justify ">Цель пробного занятия — определить уровень ученика и дать рекомендации по
+            подготовке к экзамену. Как проходит пробное занятие: </p>
 
         <ul class="red__dot__list lead text-left mb-3">
             <li>Договариваемся о времени</li>
             <li>Созваниваемся по скайпу</li>
             <li>Определяем ваш уровень</li>
             <li>Обсуждаем стратегию подготовки</li>
-
         </ul>
         <div class="w-100 mb-3 ml-4">
             <a href="#collapseIntro" class=" d-inline-block my_btn btn btn-info" data-toggle="collapse">Подробнее</a>
         </div>
         <div class="collapse" id="collapseIntro">
             <div class="card card-body mt-1">
-                <ol class="text-justify lead">
-                    <li>Мы договариваемся о времени первого занятия по скайпу. Предварительно я даю ссылку на онлайн тест, который нужно сделать ДО нашего занятия. ВАЖНО, чтобы ребенок САМОСТОЯТЕЛЬНО прошел тестирование, без чьей-либо помощи и не пользуясь
+                <ol class="text-justify lead pl-2">
+                    <li>Мы договариваемся о времени первого занятия по скайпу. Предварительно я даю ссылку на онлайн
+                        тест, который нужно сделать ДО нашего занятия. ВАЖНО, чтобы ребенок САМОСТОЯТЕЛЬНО прошел
+                        тестирование, без чьей-либо помощи и не пользуясь
                         словарем. Это необходимо для максимально точного определения уровня знаний языка.
                     </li>
-                    <li class='mt-3'>В назначенное время мы созваниваемся по скайпу. Желательно присутствие родителя во время урока. Мы знакомимся друг с другом, я узнаю об опыте изучения английского языка ученика и Ваши планы. Общение проходит на русском языке.</li>
-                    <li class='mt-3'> Вы сообщаете мне количество баллов по тесту. Затем я провожу устное тестирование на английском языке, которое поможет мне составить более полную картину об уровне языка ребенка.</li>
-                    <li class='mt-3'>По результатам письменной и устной части тестирования я определяю приблизительный уровень ученика. В зависимости от языкового уровня, оставшегося времени до экзамена и предполагаемой частоты занятий я даю свои рекомендации касаемо
-                        дальнейшей стратегии обучения.</li>
-                    <li class='mt-3'>При необходимости отвечаю на возникшие вопросы. На этом занятие завершается. В течение трех дней я жду Вашей обратной связи о готовности начать занятия.</li>
+                    <li class='mt-3'>В назначенное время мы созваниваемся по скайпу. Желательно присутствие родителя во
+                        время урока. Мы знакомимся друг с другом, я узнаю об опыте изучения английского языка ученика и
+                        Ваши планы. Общение проходит на русском языке.
+                    </li>
+                    <li class='mt-3'> Вы сообщаете мне количество баллов по тесту. Затем я провожу устное тестирование
+                        на английском языке, которое поможет мне составить более полную картину об уровне языка ребенка.
+                    </li>
+                    <li class='mt-3'>По результатам письменной и устной части тестирования я определяю приблизительный
+                        уровень ученика. В зависимости от языкового уровня, оставшегося времени до экзамена и
+                        предполагаемой частоты занятий я даю свои рекомендации касаемо
+                        дальнейшей стратегии обучения.
+                    </li>
+                    <li class='mt-3'>При необходимости отвечаю на возникшие вопросы. На этом занятие завершается. В
+                        течение трех дней я жду Вашей обратной связи о готовности начать занятия.
+                    </li>
                 </ol>
             </div>
         </div>
@@ -377,7 +332,8 @@
         </div>
 
         <div class="text-center">
-            <a data-toggle="modal" data-target="#exampleModal" href="#" id="try--btn" class="btn--rounded btn--rounded--white mt-3 mb-3 ">Запишись!</a>
+            <a data-toggle="modal" data-target="#exampleModal" href="#" id="try--btn"
+               class="btn--rounded btn--rounded--white mt-3 mb-3 ">Запишись!</a>
         </div>
     </div>
 
@@ -386,13 +342,19 @@
     <div id="online" class="text-white">_</div>
     <h2 class="display-5 ege mt-5 ml-3">Про онлайн</h2>
     <div class="shadow p-3">
-        <p class="lead">Обучение онлайн набирает все большую популярность во всем мире. Почему онлайн занятия с преподавателем не менее, а даже более эффективны, чем обычные: </p>
+        <p class="lead">Обучение онлайн набирает все большую популярность во всем мире. Почему онлайн занятия с
+            преподавателем не менее, а даже более эффективны, чем обычные: </p>
         <ul class="text-justify lead red__dot__list">
-            <li>это экономит время ученика и учителя, а значит у обоих появляется дополнительное время для подготовки</li>
+            <li>это экономит время ученика и учителя, а значит у обоих появляется дополнительное время для подготовки
+            </li>
             <li>есть возможность записывать полностью или часть занятия и отслеживать прогресс учащегося</li>
-            <li>благодаря функции "демонстрация экрана" удобно заниматься по учебникам и другим материалам в электронном виде</li>
+            <li>благодаря функции "демонстрация экрана" удобно заниматься по учебникам и другим материалам в электронном
+                виде
+            </li>
             <li>не нужно прерывать занятия при отъезде или легком недомогании</li>
-            <li>подрастающему поколению важно уметь пользоваться современными технологиями, в том числе в области образования</li>
+            <li>подрастающему поколению важно уметь пользоваться современными технологиями, в том числе в области
+                образования
+            </li>
             <li>занятия онлайн дешевле, чем на дому</li>
         </ul>
     </div>
@@ -406,13 +368,64 @@
         <div class="carousel-inner mb-5" role="listbox">
             <div class="carousel-item active">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body" data-toggle="modal" data-target=".bd-100-modal-lg">
                         <h5 class="card-title">Наталья</h5>
                         <div class="d-flex flex-row">
-                            <p class="card-text font-italic mr-5">
-                                <img class="reviews--photos mb-1" src="/img/Natalia.jpg" alt="Фото Натальи">Хочу выразить огромную благодарность Марии. Моё знакомство с английским языком началось с её занятий. Каждое занятие было построено методично
-                                и грамотно и 90 минут пролетали на одном дыхании. Я очень рада своему прогрессу в изучении английского языка и с полной уверенностью могу порекомендовать Марию как прекрасного специалиста. Сейчас уверенно использую
+                            <p class="card-text font-italic mr-5 text-justify">
+                                <img class="reviews--photos mb-1" src="img/Natalia.jpg" alt="Фото Натальи">
+                                Хочу выразить огромную благодарность Марии. Моё знакомство с английским языком началось
+                                с её
+                                занятий. Каждое занятие было построено методично
+                                и грамотно и 90 минут пролетали на одном дыхании. Я очень рада своему прогрессу в
+                                изучении
+                                английского языка и с полной уверенностью могу порекомендовать Марию как прекрасного
+                                специалиста. Сейчас уверенно использую
                                 язык во время путешествий.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body" data-toggle="modal" data-target=".bd-101-modal-lg">
+                        <h5 class="card-title">Егор</h5>
+                        <div class="d-flex flex-row">
+                            <p class="card-text font-italic mr-5 text-justify">
+                                <img class="reviews--photos mb-1" src="img/egor.jpg" alt="Фото Егора">
+                                Здравствуйте!
+                                Занимался у Марии Юрьевны в течении 3 лет, за это время смог получить уровень
+                                английского
+                                В1, занятия проходили очень интересно и занимательно,
+                                читали книги на английском, слушали аудио материалы, после уроков вопросов по теме не
+                                оставалась, вся суть темы становилась понятной в первой половине урока! На многих
+                                занятиях
+                                мы разговаривали только на английском языке,
+                                что бы научиться лучше говорить и понимать иностранную речь. Благодаря Марии Юрьевне
+                                теперь
+                                я могу спокойно общаться за рубежом, и за это я хочу сказать огромное спасибо!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-body" data-toggle="modal" data-target=".bd-102-modal-lg">
+                        <h5 class="card-title">Елена</h5>
+                        <div class="d-flex flex-row">
+                            <p class="card-text font-italic mr-5 text-justify">
+                                <img class="reviews--photos mb-1" src="img/Elena.jpg" alt="Фото Елены">
+                                Моя дочка
+                                занималась
+                                английским языком у Марии Юрьевны с 6 лет. Это были и занятия в группе, и индивидуально.
+                                Очень грамотный и самый добрый преподаватель
+                                английского языка. Дочка ходила с удовольствием. Сейчас моя дочь учится за границей в
+                                частной международной английской школе и английский язык остаётся также любимым
+                                предметом с
+                                высокой оценкой. А все благодаря первому
+                                преподавателю, который правильно заложил знания и любовь к языку. Очень и очень
+                                рекомендую!
                             </p>
                         </div>
                     </div>
@@ -420,45 +433,43 @@
             </div>
             <div class="carousel-item">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Егор</h5>
-                        <p class="card-text font-italic mr-5">
-                            <img class="reviews--photos mb-1" src="/img/egor.jpg" alt="Фото Егора"> Здравствуйте! Занимался у Марии Юрьевны в течении 3 лет, за это время смог получить уровень английского В1, занятия проходили очень интересно и занимательно,
-                            читали книги на английском, слушали аудио материалы, после уроков вопросов по теме не оставалась, вся суть темы становилась понятной в первой половине урока! На многих занятиях мы разговаривали только на английском языке,
-                            что бы научиться лучше говорить и понимать иностранную речь. Благодаря Марии Юрьевне теперь я могу спокойно общаться за рубежом, и за это я хочу сказать огромное спасибо!!!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Елена</h5>
-                        <p class="card-text font-italic mr-5">
-                            <img class="reviews--photos mb-1" src="/img/Elena.jpg" alt="Фото Елены">Моя дочка занималась английским языком у Марии Юрьевны с 6 лет. Это были и занятия в группе, и индивидуально. Очень грамотный и самый добрый преподаватель
-                            английского языка. Дочка ходила с удовольствием. Сейчас моя дочь учится за границей в частной международной английской школе и английский язык остаётся также любимым предметом с высокой оценкой. А все благодаря первому
-                            преподавателю, который правильно заложил знания и любовь к языку. Очень и очень рекомендую! </p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="card-body">
+                    <div class="card-body" data-toggle="modal" data-target=".bd-103-modal-lg">
                         <h5 class="card-title">Нелли</h5>
-                        <p class="card-text font-italic mr-5">
-                            <img class="reviews--photos mb-1" src="/img/nelli.jpg" alt="Фото Нелли">Мария занималась с моей дочерью подготовкой к ОГЭ по английскому (в то время он назывался ГИА). Затем, когда Мария уехала работать за границу, мы продолжили
-                            занятия удаленно, чтобы подготовиться к ЕГЭ. Уроки по скайпу оказались не менее эффективными и экономили много времени. В итоге, моя дочь успешно сдала экзамен по английскому и смогла поступить на бюджет на языковой факультет.
-                            Огромное спасибо за это нашему преподавателю Марии!</p>
+                        <div class="d-flex flex-row">
+                            <p class="card-text font-italic mr-5 text-justify">
+                                <img class="reviews--photos mb-1" src="img/nelli.jpg" alt="Фото Нелли">Мария занималась
+                                с
+                                моей дочерью подготовкой к ОГЭ по английскому (в то время он назывался ГИА). Затем,
+                                когда
+                                Мария уехала работать за границу, мы продолжили
+                                занятия удаленно, чтобы подготовиться к ЕГЭ. Уроки по скайпу оказались не менее
+                                эффективными
+                                и экономили много времени. В итоге, моя дочь успешно сдала экзамен по английскому и
+                                смогла
+                                поступить на бюджет на языковой факультет.
+                                Огромное спасибо за это нашему преподавателю Марии!</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body" data-toggle="modal" data-target=".bd-104-modal-lg">
                         <h5 class="card-title">Наталья</h5>
-                        <p class="card-text font-italic mr-5">Мария Юрьевна любимый преподаватель моей дочери уже много лет. Занимаемся дистанционно, так как для нас это удобнее, учитывая занятость дочки. Мария Юрьевна настоящий профессионал, доброжелательная и внимательная. Результатом
-                            очень довольны. Всегда учитывает пожелания. В этом году подключила к занятиям младшего, так как понравилась дистанционная форма обучения и Мария Юрьевна из тех педагогов, благодаря которым не только получают знания, но
-                            и любят предмет! Спасибо большое!
-                        </p>
+                        <div class="d-flex flex-row">
+                            <p class="card-text font-italic mr-5 text-justify">Мария Юрьевна любимый преподаватель моей дочери уже
+                                много
+                                лет. Занимаемся дистанционно, так как для нас это удобнее, учитывая занятость дочки.
+                                Мария
+                                Юрьевна настоящий профессионал, доброжелательная и внимательная. Результатом
+                                очень довольны. Всегда учитывает пожелания. В этом году подключила к занятиям младшего,
+                                так
+                                как понравилась дистанционная форма обучения и Мария Юрьевна из тех педагогов, благодаря
+                                которым не только получают знания, но
+                                и любят предмет! Спасибо большое!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -470,8 +481,223 @@
             <span class="carousel-control-next-icon"></span>
         </a>
 
-    </div>
+        <!-- Modal сертификаты -->
+        <div class="modal fade bd-1-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">x</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/IELTS_teacher_training.jpg" alt="IELTS сертификат">
+                </div>
+            </div>
+        </div>
 
+        <div class="modal fade bd-2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TEFL_Maria.jpg" alt="TEFL сертификат">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-3-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TKT.jpg" alt="TKT сертификат">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-4-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TKT_1.jpg" alt="TKT-1 сертификат">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-5-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TKT_2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-6-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TKT_3.jpg" alt="TKT-3 сертификат">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-7-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/TOEIC.jpg" alt="TOEC сертификат">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-8-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content pb-3">
+                    <button data-dismiss="modal" class="close ml-auto pr-1" type="button">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <img class="modal--img" src="sert/Online.jpg" alt="Cертификат онлайн обучение">
+                </div>
+            </div>
+        </div>
+        <!-- Modal сертификаты конец-->
+
+        <!-- Modal reviews-->
+        <div class="modal fade bd-100-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <h5 class="card-title">Наталья</h5>
+                    <div class="d-flex flex-row">
+                        <p class="card-text font-italic mr-5 text-justify">
+                            <img class="reviews--photos mb-1" src="img/Natalia.jpg" alt="Фото Натальи">
+                            Хочу выразить
+                            огромную благодарность Марии. Моё знакомство с английским языком началось с её занятий.
+                            Каждое занятие было построено методично
+                            и грамотно и 90 минут пролетали на одном дыхании. Я очень рада своему прогрессу в изучении
+                            английского языка и с полной уверенностью могу порекомендовать Марию как прекрасного
+                            специалиста. Сейчас уверенно использую
+                            язык во время путешествий.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-101-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <h5 class="card-title">Егор</h5>
+                    <div class="d-flex flex-row">
+                        <p class="card-text font-italic mr-5 text-justify">
+                            <img class="reviews--photos mb-1" src="img/egor.jpg" alt="Фото Егора">
+                            Здравствуйте!
+                            Занимался у Марии Юрьевны в течении 3 лет, за это время смог получить уровень английского
+                            В1, занятия проходили очень интересно и занимательно,
+                            читали книги на английском, слушали аудио материалы, после уроков вопросов по теме не
+                            оставалась, вся суть темы становилась понятной в первой половине урока! На многих занятиях
+                            мы разговаривали только на английском языке,
+                            что бы научиться лучше говорить и понимать иностранную речь. Благодаря Марии Юрьевне теперь
+                            я могу спокойно общаться за рубежом, и за это я хочу сказать огромное спасибо!!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-102-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <h5 class="card-title">Елена</h5>
+                    <div class="d-flex flex-row">
+                        <p class="card-text font-italic mr-5 text-justify">
+                            <img class="reviews--photos mb-1" src="img/Elena.jpg" alt="Фото Елены">
+                            Моя дочка
+                            занималась
+                            английским языком у Марии Юрьевны с 6 лет. Это были и занятия в группе, и индивидуально.
+                            Очень грамотный и самый добрый преподаватель
+                            английского языка. Дочка ходила с удовольствием. Сейчас моя дочь учится за границей в
+                            частной международной английской школе и английский язык остаётся также любимым
+                            предметом с
+                            высокой оценкой. А все благодаря первому
+                            преподавателю, который правильно заложил знания и любовь к языку. Очень и очень
+                            рекомендую!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-103-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <h5 class="card-title">Нелли</h5>
+                    <div class="d-flex flex-row">
+                        <p class="card-text font-italic mr-5 text-justify">
+                            <img class="reviews--photos mb-1" src="img/nelli.jpg" alt="Фото Нелли">Мария занималась
+                            с
+                            моей дочерью подготовкой к ОГЭ по английскому (в то время он назывался ГИА). Затем,
+                            когда
+                            Мария уехала работать за границу, мы продолжили
+                            занятия удаленно, чтобы подготовиться к ЕГЭ. Уроки по скайпу оказались не менее
+                            эффективными
+                            и экономили много времени. В итоге, моя дочь успешно сдала экзамен по английскому и
+                            смогла
+                            поступить на бюджет на языковой факультет.
+                            Огромное спасибо за это нашему преподавателю Марии!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade bd-104-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <h5 class="card-title">Наталья</h5>
+                    <div class="d-flex flex-row">
+                        <p class="card-text font-italic mr-5 text-justify">Мария Юрьевна любимый преподаватель моей дочери уже
+                            много
+                            лет. Занимаемся дистанционно, так как для нас это удобнее, учитывая занятость дочки.
+                            Мария
+                            Юрьевна настоящий профессионал, доброжелательная и внимательная. Результатом
+                            очень довольны. Всегда учитывает пожелания. В этом году подключила к занятиям младшего,
+                            так
+                            как понравилась дистанционная форма обучения и Мария Юрьевна из тех педагогов, благодаря
+                            которым не только получают знания, но
+                            и любят предмет! Спасибо большое!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal reviews end-->
+
+    </div>
 
 
     <h2 id="contacts" class="display-5 ege mt-5 ml-3">Контакты</h2>
@@ -505,9 +731,15 @@
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "
+        crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
+        crossorigin="anonymous "></script>
 <script src="script.js"></script>
 
 </body>
