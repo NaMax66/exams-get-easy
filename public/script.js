@@ -3,6 +3,8 @@
 
         let sendInfo = function() {
 
+            document.getElementById("submit-btn").disabled = true; //отключаем кнопку
+
             function onLoad() {
                 let response = this.responseText;
 
@@ -13,6 +15,7 @@
                 } catch (e) {
                     console.log(e.message);
                 }
+                //TODO: попить кофе
 
                 setTimeout(function() {
                     if (parsedResponse.responseCode === 0) {
@@ -29,6 +32,8 @@
                 // handle error here, print message perhaps
                 console.log("error receiving async AJAX call");
             }
+
+
 
             let clientName = document.getElementById("name").value;
             let clientPhone = document.getElementById("phone").value;
@@ -64,9 +69,6 @@
                     } catch (e) {
                         console.log(e.message);
                     }
-
-                    document.getElementById("submit-btn").disabled = true; //отключаем кнопку
-                    //document.getElementById('submit-form').removeEventListener('keypress', pressEnter);//отключаем enter
                 },100);
 
             } else {
