@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 function sendMail(name, phone, comment) {
     let transporter;
-    //если почта на удаленном сервере - тправляем с localhost
+    //если почта на удаленном сервере - отправляем с localhost
 
     if (APP_PATH) {//на моем пк эта переменная не определена
         transporter = nodeMailer.createTransport({
@@ -86,7 +86,7 @@ function sendMail(name, phone, comment) {
     });
 }
 
-app.post('/index.html', (req, res) => {
+app.post('/userData', (req, res) => {
     //recaptcha challenge
     const secretKey = '6Le6jbEUAAAAAJWaPaeYw7XPjumgyICbZzQI-tKk';
     let verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" +
