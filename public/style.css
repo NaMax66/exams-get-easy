@@ -53,6 +53,15 @@ a:hover {
         width: 28rem;
         align-self: center;
     }
+
+    /*html 374 card-text font-italic mr-5 text-justify */
+
+
+}
+@media screen and (min-width: 992px){
+    .my__review--card {
+        margin-right: 6rem !important;
+    }
 }
 
 .carousel-inner {

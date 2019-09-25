@@ -106,7 +106,8 @@
         });
         phoneInput.addEventListener("input", () => {
 
-            let numberAmount = phoneInput.value.replace(/[^0-9]/g,"").length;
+            //count only numbers. regexp /\d/
+            let numberAmount = phoneInput.value.toString().match(/\d/g).length;
 
             if (numberAmount >= 10) {
                 phoneInput.classList.add("is-valid");
@@ -135,5 +136,22 @@
     document.getElementById("header--btn").addEventListener("click", submitFormScript);
     document.getElementById("try--btn").addEventListener("click", submitFormScript);
     document.getElementById("nav--btn").addEventListener("click", submitFormScript);
+
+    //if scroll - hide menu
+    const navbarBtn = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    window.addEventListener('scroll', () => {
+        //choose menu btn
+        const ariaExpanded = navbarBtn.attributes.getNamedItem('aria-expanded');
+        if (!ariaExpanded)
+            return;
+
+        if (ariaExpanded.value !== "false"){
+            ariaExpanded.value = "false";
+            navbarBtn.click();
+        }
+
+    })
 
 }
