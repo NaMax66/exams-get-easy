@@ -1,11 +1,14 @@
 {
-    let submitFormScript = function () {
+    let responseCode = 1;
+
+    const submitFormScript = function () {
         let isPhoneValid = false;
         let isNameValid = false;
         let isTextAreaValid = true;
 
+        let formResponse = '';
 
-        let sendInfo = function () {
+        const sendInfo = function () {
             //проверяем валидность
             if (!isNameValid || !isPhoneValid || !isTextAreaValid) {
                 alert('Имя должно содержать минимум 2 символа. \nТелефон минимум 10 цифр. \nКомментарий не длиннее 1000 символов.');
@@ -16,23 +19,18 @@
             document.getElementById("submit-btn").disabled = true; //отключаем кнопку
 
             function onLoad() {
-                let response = this.responseText;
+                formResponse = JSON.parse(this.responseText);
 
-                let parsedResponse = "";
-
-                try {
-                    parsedResponse = JSON.parse(response);
-                } catch (e) {
-                    console.log(e.message);
-                }
-
-                if (parsedResponse.responseCode === 0) {
+                //todo add animation
+                if (formResponse.message === 'ok') {
                     document.getElementById("success__msg").classList.toggle("hidden__element");
                     document.getElementById("input__fields").classList.toggle("hidden__element");
                 } else {
                     document.getElementById("error__msg").classList.toggle("hidden__element");
                     document.getElementById("input__fields").classList.toggle("hidden__element");
+                    console.log(formResponse.message);
                 }
+
             }
 
             function onError() {
@@ -44,13 +42,13 @@
             let clientName = document.getElementById("name").value;
             let clientPhone = document.getElementById("phone").value;
             let clientComment = document.getElementById("comments").value;
-            let token = document.getElementById("g-recaptcha-response").value;
+
 
             if (clientName && clientPhone) {
                 event.preventDefault();
 
                 let data = {
-                    secret: token,
+                    responseCode: responseCode,
                     name: clientName,
                     phone: clientPhone,
                     comment: clientComment
@@ -68,15 +66,7 @@
                 submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>\n' +
                     '  Loading...';
 
-                setTimeout(function () {
-                    try {
-                        xhr.send(JSON.stringify(data));
-                    } catch (e) {
-                        console.log(e.message);
-                    }
-                }, 1500);
-
-
+                xhr.send(JSON.stringify(data));
 
             } else {
                 //if form not valid - try again
@@ -139,19 +129,43 @@
 
     //if scroll - hide menu
     const navbarBtn = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
+
     window.addEventListener('scroll', () => {
         //choose menu btn
         const ariaExpanded = navbarBtn.attributes.getNamedItem('aria-expanded');
         if (!ariaExpanded)
             return;
 
-        if (ariaExpanded.value !== "false"){
+        if (ariaExpanded.value !== "false") {
             ariaExpanded.value = "false";
             navbarBtn.click();
         }
 
-    })
+    });
+
+    const xhrToken = new XMLHttpRequest();
+    xhrToken.open('POST', '/checkToken', true);
+    xhrToken.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhrToken.addEventListener("load", res => {
+        const responseObject = JSON.parse(res.currentTarget.responseText);
+        responseCode = responseObject.responseCode;
+    });
+    xhrToken.addEventListener("error", err => {
+        console.log(err);
+    });
+
+    new Promise((resolve) => {
+
+        let i = setInterval(() => {
+            let token = document.getElementById("g-recaptcha-response").value;
+            if (token) {
+                resolve(token);
+                clearInterval(i);
+            }
+        }, 200)
+
+    }).then((token) => {
+        xhrToken.send(JSON.stringify({secret: token}));
+    }).catch(err => console.log(err));
 
 }

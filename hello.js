@@ -1,6 +1,4 @@
-const http = require('http');
 const path = require('path');
-const fs = require('fs');
 const {APP_PORT, APP_IP, APP_PATH} = process.env;
 const nodeMailer = require('nodemailer');
 const mailData = require('./mail-data');
@@ -64,7 +62,7 @@ function sendMail(name, phone, comment) {
         from: mailData.user,
         to: mailData.to,
         subject: name + ' : ' + phone,
-        text: comment, //в пиьсме это поле не видно
+        text: comment,
         html: `<p>${comment}</p>`
     };
 
@@ -88,12 +86,24 @@ function sendMail(name, phone, comment) {
 
 app.post('/userData', (req, res) => {
     //recaptcha challenge
+    console.log(req.body);
+    //should be 0
+    if (req.body.responseCode === 0) {
+        sendMail(req.body.name, req.body.phone, req.body.comment);
+        res.json({message: 'ok'})
+    } else {
+        res.json({message: 'reCAPTCHA is not valid'})
+    }
+});
+
+app.post('/checkToken', (req, res) => {
     const secretKey = '6Le6jbEUAAAAAJWaPaeYw7XPjumgyICbZzQI-tKk';
     let verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" +
         secretKey + "&response=" + req.body.secret;
 
     request(verificationUrl, function (error, response, body) {
         body = JSON.parse(body);
+        console.log(body);
 
         // Success will be true or false depending upon captcha validation.
         if (body.success !== undefined && !body.success) {
@@ -101,13 +111,12 @@ app.post('/userData', (req, res) => {
         }
         res.json({"responseCode": 0, "responseDesc": "Success"});
     });
-
-    sendMail(req.body.name, req.body.phone, req.body.comment);
 });
 
 app.use("*", function (req, res) {
     res.status(404).send("404");
 });
+
 
 
 if (APP_IP && APP_PORT) {
